@@ -3,7 +3,7 @@
   "name": "Kuru kuru - Kururing~",
   "icons": [
     {
-      "src": "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/Herta-icon.png",
+      "src": "../audio/Herta-icon.png",
       "type": "image/png",
       "sizes": "830x830"
     }
@@ -13,6 +13,6 @@
   "background_color": "#9d88d3",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#9d88d3",
+  "theme_color": "#8a64da",
   "description": "Welcome to the Herta base, here you can add rain of Hertas, and spawning Hertas in random positions"
 }
