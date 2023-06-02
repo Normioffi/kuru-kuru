@@ -8,21 +8,23 @@
     <script src="/assets/js/kuruspawn.js" defer></script>
 
     <!-- site data -->
-    <title>Kuru kuru - Kururin~</title>
-    <meta name="og:title" content="Kuru kuru - Kururin~" />
+    <meta name="google-site-verification" content="Dq5FOxf4a13ufC-2FQrxLU8D3q36rs0CjOx00TrAy8w" />
+    <title>The Herta Base</title>
+    <meta name="og:title" content="The Herta Base" />
     <meta
       name="og:description"
       content="Welcome to the Herta base, here you can add rain of Hertas, and spawning Hertas in random positions"
     />
     <meta
       name="og:image"
-      content="https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/Herta-icon.png"
+      content="/assets/img/Herta-icon.png"
     />
+    <meta name="theme-color" content="#8a64da">
     <meta name="og:image:height" content="500" />
     <meta name="og:image:width" content="500" />
     <meta
       name="image"
-      content="https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/Herta-icon.png"
+      content="/assets/img/Herta-icon.png"
     />
     <meta name="image:height" content="500" />
     <meta name="image:width" content="500" />
@@ -34,24 +36,22 @@
     />
     <meta
       name="keywords"
-      content="Kuru kuru, kuru kuru, Herta, kuru kuru website, herta rain, herta random, Normioffi, normioffi, normi"
+      content="Kuru kuru, kuru kuru, Herta, kuru kuru website, herta rain, herta random, herta rotate, Normioffi, normioffi, normi"
     />
     <link
       rel="icon"
-      href="https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/Herta-icon.png"
+      href="/assets/img/Herta-icon.png"
     />
     <link rel="manifest" href="/assets/json/manifest.json" />
-    <!-- preconnect -->
-    <link rel="preconnect" href="https://cdn.glitch.global/" />
   </head>
   <body>
     <div class="indication">
       <h3>
         Welcome to the Herta base, here you can add rain of Hertas, and spawning
-        Hertas in random positions
+        Hertas in random positions with rotation
       </h3>
 
-      <h5 id="counter">0 Herta are here.</h5>
+      <h5> <span id="counter">0</span> Herta are here.</h5>
       <h6>Made by @Normioffi/@normioffi</h6>
     </div>
     <div class="kuru-spawn">
@@ -73,7 +73,14 @@
         value="Clear it!"
         onclick="numberGif = 0; cab.innerHTML = ''"
       />
+      <input
+        class="kr"
+        type="button"
+        value="Spawn Herta Rotating"
+        onclick="rotateKuru()"
+      />
     </div>
-    <div id="cab"></div>
+    <div id="cab">
+    </div>
   </body>
 </html>
