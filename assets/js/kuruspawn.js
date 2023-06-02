@@ -3,71 +3,89 @@
 var numberGif = 0;
 var counter = document.getElementById("counter");
 var cab = document.getElementById("cab");
-var object = document.getElementsByClassName("kuru-gif");
+var kuru = document.getElementsByClassName("kuru-gif");
 
 var arrayOfAudio = [
   new Audio(
-    "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/Kururinto.mp3"
+    "../audio/Kururinto.mp3"
   ),
   new Audio(
-    "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/Kuru.mp3"
+    "../audio/Kuru.mp3"
   ),
   new Audio(
-    "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/Kururin.mp3"
+    "../audio/Kururin.mp3"
   ),
 ];
 
-for (const audio of arrayOfAudio) {
+for (let audio of arrayOfAudio) {
   audio.preload = "auto";
 }
 
 function doKuru() {
   var audio;
-  var random = Math.floor(Math.random() * 3) + 1;
+  var random = Math.floor(Math.random() * 3) + 0;
   audio = arrayOfAudio[random].cloneNode();
   audio.play();
   audio.addEventListener("ended", function () {
     this.remove();
   });
 }
-async function randomKuru() {
+function randomKuru() {
   numberGif++;
-  var newObject = document.createElement("img");
-  newObject.setAttribute("class", "kuru-gif");
-  newObject.setAttribute("id", "gif");
-  newObject.setAttribute("data-rain", "true");
-  newObject.src =
-    "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/kururin-kuru-kuru-transparent.gif";
+  var newKuru = document.createElement("img");
+  newKuru.setAttribute("class", "kuru-gif");
+  newKuru.setAttribute("id", "gif");
+  newKuru.src = "../img/kururin-kuru-kuru-transparent.gif";
   document.body.appendChild(cab);
-  cab.appendChild(newObject);
-  for (let i = 0; i < object.length; i++) {
-    counter.innerHTML = `${numberGif} Herta are here.`;
-    object[i].style.top =
+  cab.appendChild(newKuru);
+  for (let i = 0; i < kuru.length; i++) {
+    counter.innerHTML = numberGif;
+    kuru[i].style.top =
       Math.floor(Math.random() * window.innerHeight) + 50 + "px";
-    object[i].style.left =
+    kuru[i].style.left =
       Math.floor(Math.random() * window.innerWidth) + 50 + "px";
   }
   doKuru();
 }
 
-var objectR = document.getElementsByClassName("kuru-gif-rain");
-async function rainKuru() {
+var kuruR = document.getElementsByClassName("kuru-gif-rain");
+ function rainKuru() {
   numberGif++;
-  var newObject = document.createElement("img");
-  newObject.setAttribute("class", "kuru-gif-rain");
-  newObject.setAttribute("id", "gif");
-  newObject.setAttribute("data-rain", "true");
-  newObject.src =
-    "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/kururin-kuru-kuru-transparent.gif";
+  var newKuru = document.createElement("img");
+  newKuru.setAttribute("class", "kuru-gif-rain");
+  newKuru.setAttribute("id", "gif");
+  newKuru.src = "../img/kururin-kuru-kuru-transparent.gif";
   document.body.appendChild(cab);
-  cab.appendChild(newObject);
-  for (let i = 0; i < objectR.length; i++) {
-    counter.innerHTML = `${numberGif} Herta are here.`;
-    objectR[i].setAttribute(
+  cab.appendChild(newKuru);
+  for (let i = 0; i < kuruR.length; i++) {
+    counter.innerHTML = numberGif;
+    kuruR[i].setAttribute(
       "style",
       `animation: rain-anim ${Math.floor(Math.random() * 100) + "s"} infinite`
     );
-    objectR[i].style.left =
+    kuruR[i].style.left =
+      Math.floor(Math.random() * window.innerWidth) + 50 + "px";
+  }
+  doKuru();
+}
+var kuruRo = document.getElementsByClassName("kuru-gif-rotate")
+function rotateKuru() {
+  numberGif++;
+  var newKuru = document.createElement("img");
+  newKuru.setAttribute("class", "kuru-gif-rotate");
+  newKuru.setAttribute("id", "gif");
+  newKuru.src = "../img/kururin-kuru-kuru-transparent.gif";
+  document.body.appendChild(cab);
+  cab.appendChild(newKuru);
+  for (let i = 0; i < kuruRo.length; i++) {
+    counter.innerHTML = numberGif;
+    kuruRo[i].setAttribute(
+      "style",
+      `animation: rotation ${Math.floor(Math.random() * 10) + "s"} infinite ease`
+    );
+    kuruRo[i].style.top =
+      Math.floor(Math.random() * window.innerHeight) + 50 + "px";
+    kuruRo[i].style.left =
       Math.floor(Math.random() * window.innerWidth) + 50 + "px";
   }
   doKuru();
