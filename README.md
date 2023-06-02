@@ -1,4 +1,5 @@
 # kuru-kuru
-Welcome to the Herta base, here you can add rain of Hertas, and spawning Hertas in random positions (more fonction soon)
+Welcome to the Herta base, here you can add rain of Hertas, and spawning Hertas in random positions (more function soon)
 
-Website: https://kuru-kuru.glitch.me/
+# Spawn Herta as you want!
+But care of your device
