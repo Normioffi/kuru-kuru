@@ -8,27 +8,51 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center
 }
 
 .kuru-spawn .kr {
   background-color: #8a64da;
   border: solid;
   color: white;
+  padding: 10px;
+  width: 250px;
   border-radius: 5px;
+  z-index: 2;
 }
 .kuru-spawn .kr:hover {
   background-color: darkviolet;
   border-color: black;
 }
 
+marquee {
+  height: 80vh;
+}
 .kuru-gif,
-.kuru-gif-rain {
+.kuru-gif-rain,
+.kuru-gif-rotate {
   width: 100px;
   height: 100px;
   position: absolute;
   border-radius: 5px;
 }
 
+@media (max-width: 1250px) {
+  .kuru-spawn {
+    display: block;
+  }
+  .kr {
+    z-index: 2
+  }
+}
+@keyframes rotation {
+0% {
+  transform: rotate(0deg)
+}
+100% {
+  transform: rotate(360deg)
+}
+}
 @keyframes rain-anim {
   0% {
     transform: translate(0px, 0px);
