@@ -7,13 +7,13 @@ var kuru = document.getElementsByClassName("kuru-gif");
 
 var arrayOfAudio = [
   new Audio(
-    "../audio/Kururinto.mp3"
+    "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/Kururinto.mp3"
   ),
   new Audio(
-    "../audio/Kuru.mp3"
+    "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/Kuru.mp3"
   ),
   new Audio(
-    "../audio/Kururin.mp3"
+    "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/Kururin.mp3"
   ),
 ];
 
@@ -30,12 +30,12 @@ function doKuru() {
     this.remove();
   });
 }
-function randomKuru() {
+async function randomKuru() {
   numberGif++;
-  var newKuru = document.createElement("img");
-  newKuru.setAttribute("class", "kuru-gif");
+  var newKuru =  document.createElement("img");
+  await newKuru.setAttribute("class", "kuru-gif");
   newKuru.setAttribute("id", "gif");
-  newKuru.src = "../img/kururin-kuru-kuru-transparent.gif";
+  newKuru.src = "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/kururin-kuru-kuru-transparent.gif";
   document.body.appendChild(cab);
   cab.appendChild(newKuru);
   for (let i = 0; i < kuru.length; i++) {
@@ -54,7 +54,7 @@ var kuruR = document.getElementsByClassName("kuru-gif-rain");
   var newKuru = document.createElement("img");
   newKuru.setAttribute("class", "kuru-gif-rain");
   newKuru.setAttribute("id", "gif");
-  newKuru.src = "../img/kururin-kuru-kuru-transparent.gif";
+  newKuru.src = "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/kururin-kuru-kuru-transparent.gif";
   document.body.appendChild(cab);
   cab.appendChild(newKuru);
   for (let i = 0; i < kuruR.length; i++) {
@@ -74,7 +74,7 @@ function rotateKuru() {
   var newKuru = document.createElement("img");
   newKuru.setAttribute("class", "kuru-gif-rotate");
   newKuru.setAttribute("id", "gif");
-  newKuru.src = "../img/kururin-kuru-kuru-transparent.gif";
+  newKuru.src = "https://cdn.glitch.global/74a51c6a-712a-42a0-97bb-714bd339d1ad/kururin-kuru-kuru-transparent.gif";
   document.body.appendChild(cab);
   cab.appendChild(newKuru);
   for (let i = 0; i < kuruRo.length; i++) {
